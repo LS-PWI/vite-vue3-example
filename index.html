@@ -9,5 +9,26 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    
+    <!-- Below is "normal" javascript interacting with HTML -->
+    
+    <article class="blog-post">
+      <h1 id="first-post-title">This is a title<h1>
+      <p>Empty body</p>  
+    </article>
+    
+    <script>
+      let postTitle = document.getElementById("first-post-title")
+      console.log(postTitle)
+      postTitle.innerHTML = "New Title"
+  
+      postTitle.addEventListener("click", () => {
+        let article = document.querySelector(".blog-post")
+        console.log(article)
+        article.style.backgroundColor = 'yellow';
+        article.style.color = 'red';
+      })
+      
+    </script>
   </body>
 </html>
